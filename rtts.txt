@@ -27,8 +27,6 @@ microsoft.com
 7.349
 wordpress.com
 24.741
-google.com.mx
-0.397
 tumblr.com
 7.052
 aliexpress.com

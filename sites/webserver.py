@@ -6,7 +6,7 @@ from argparse import ArgumentParser
 parser = ArgumentParser(description="Webserver")
 
 
-class CS144Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+class CHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
     # Disable logging DNS lookups
     def address_string(self):
@@ -21,7 +21,7 @@ parser.add_argument('--tfo',
 args = parser.parse_args()
 
 PORT = 80
-Handler = CS144Handler
+Handler = CHandler
 httpd = SocketServer.TCPServer(("", PORT), Handler)
 print "Server1: httpd serving at port", PORT
 

@@ -47,11 +47,10 @@ class TFOTopo(Topo):
     "Simple topology for bufferbloat experiment."
 
     def build(self, n=2):
-        # Here I have created a switch.  If you change its name, its
-        # interface names will change from s0-eth1 to newname-eth1.
+        #Burada bir switch oluşturdum. 
+        #  Adını değiştirirseniz, arayüz adları s0-eth1'den newname-eth1 olarak değişir.
         switch = self.addSwitch('s0')
-        # We create two hosts and add links with appropriate 
-        # characteristics
+        #İki host oluşturma ve uygun özelliklere sahip bağlantılar eklenmesi
         h1 = self.addHost('h1')
         h2 = self.addHost('h2')
         self.addLink(h1, h2, delay=(str(args.delay) + 'ms'), bw=args.bw_net)
@@ -82,7 +81,7 @@ def bufferbloat():
     net = Mininet(topo=topo, host=CPULimitedHost, link=TCLink, controller=OVSController)
     net.start()
 
-    # This dumps the topology and how nodes are interconnected through links.
+    # Bu dump, topolojiyi ve düğümlerin bağlantılar yoluyla nasıl birbirine bağlandığını gösterir.
     # dumpNodeConnections(net.hosts)
 
     webserver = start_webserver(net)
@@ -93,8 +92,8 @@ def bufferbloat():
 
     #webserver.kill()
     net.stop()
-    # Ensure that all processes you create within Mininet are killed.
-    # Sometimes they require manual killing.
+    # Mininet'te yarattığınız tüm işlemlerin durdurulduğundan emin olun.
+    # Bazen elle manuel olarak durdurulması gerekebilir.
     Popen("pgrep -f webserver.py | xargs kill -9", shell=True).wait()
 
 if __name__ == "__main__":

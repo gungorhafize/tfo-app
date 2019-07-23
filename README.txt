@@ -1,29 +1,30 @@
-Go to Google Cloud Engine and click ‘CREATE INSTANCE’. The instance should have the following properties:
+Google Cloud Engine'e gidin ve "CREATE INSTANCE" tıklayın. 
+
+Instance şu özelliklere sahip olmalıdır:
  
-Machine Type
+Makine Tipi
 1 vCPU with 3.75 GB memory
  
 Boot Disk
 Ubuntu 14.04 LTS
  
-Check the following under Firewall
+Güvenlik Duvarı altında aşağıdakileri kontrol edin:
 Allow HTTP Traffic
 Allow HTTPS Traffic
  
-Click ‘Create’
+"Create" e tıklayın
  
-Next, you will want to SSH into the instance. Once you have done so, run the following commands:
+Daha sonra, örnek -instance- üzerine secure shell. Bunu yaptıktan sonra, aşağıdaki komutları çalıştırın:
  
 sudo apt-get update
 sudo apt-get -y install git
  
-cd ~; git clone https://logicalmath333@bitbucket.org/cs240groupproject/project3.git
+cd ~; git clone https://github.com/gungorhafize/tfo.git
  
-Then, set up your git information like the following:
+Ardından, git bilgilerinizi aşağıdaki gibi ayarlayın:
  
-cd project3; sudo python run.py
+cd tfo.git; sudo python run.py
  
-Wait 15-30 minutes
- 
-Check out the results in results.txt
-
+15-30 dakika bekle
+ 
+Results.txt içindeki sonuçları göz atın

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Note: Mininet must be run as root.  So invoke this shell script
-# using sudo.
+# Mininet root olarak başlatılmalıdır. Ki bu shell sudo kullanılarak çağırılabilsin
+
 
 # Birimler Mbps cinsindedir
 # https://github.com/mininet/mininet/wiki/Introduction-to-Mininet
@@ -35,6 +35,6 @@ for site in nyt amazon wiki_tcp wsj; do
   done
 done
 
-echo "IMPROVMENT" >> results.txt
+echo "IYILESME" >> results.txt
 echo "=================================" >> results.txt
 python results_parser.py results.txt >> results.txt

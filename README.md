@@ -1,6 +1,6 @@
 # TCP Fast Open Uygulaması
 
-TCP Fast Open'ın amacı TCP bağlantılarını 1-3 RTT'den 0 RTT'ye iyileştirmek için üç yollu el sıkışmasının (3 way handshake) gecikme süresini azaltmaktır.
+- TCP Fast Open'ın amacı TCP bağlantılarını 1-3 RTT'den 0 RTT'ye iyileştirmek için 3 way handshake gecikme süresini azaltmaktır.
 
 ###### Kullanılan Teknolojiler ve Araçlar🛠
 ---

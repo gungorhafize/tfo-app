@@ -24,7 +24,7 @@ Ubuntu 14.04 LTS
  
 "Create" e tıklayın
  
-Daha sonra, örnek -instance- üzerine secure shell. Bunu yaptıktan sonra, aşağıdaki komutları çalıştırın:
+Daha sonra, örnek -instance- üzerine secure shell (SSH). Bunu yaptıktan sonra, aşağıdaki komutları çalıştırın:
  ```sh
 sudo apt-get update
 sudo apt-get -y install git
